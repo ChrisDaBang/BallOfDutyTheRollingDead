@@ -17,7 +17,7 @@ import java.util.Map;
 public class PlayerProcessor implements IEntityProcessor
 {
     private Entity _player;
-    private int _movementSpeed;
+    private int _movementSpeed = 250;
 
     public PlayerProcessor(Entity player)
     {
@@ -50,5 +50,6 @@ public class PlayerProcessor implements IEntityProcessor
         {
             vel.addVector(-1, 0);
         }
+        vel.setMagnitude(_movementSpeed);
     }
 }
