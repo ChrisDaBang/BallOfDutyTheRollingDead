@@ -13,11 +13,30 @@ public class Body
 {
     private int _height;
     private int _width;
+    private Geometry _type;
+
+    public enum Geometry
+    {
+        CIRCLE, RECTANGLE;
+        private static final Geometry[] types = Geometry.values();
+
+        public static Geometry getType(int index)
+        {
+            return types[index];
+        }
+    }
 
     public Body(int height, int width)
     {
         _height = height;
         _width = width;
+    }
+
+    public Body(int height, int width, Geometry type)
+    {
+        _height = height;
+        _width = width;
+        _type = type;
     }
 
     public int getHeight()
@@ -39,4 +58,15 @@ public class Body
     {
         this._width = width;
     }
+
+    public Geometry getType()
+    {
+        return _type;
+    }
+
+    public void setType(Geometry _type)
+    {
+        this._type = _type;
+    }
+
 }
