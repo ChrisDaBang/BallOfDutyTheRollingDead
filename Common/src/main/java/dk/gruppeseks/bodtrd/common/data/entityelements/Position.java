@@ -41,4 +41,15 @@ public class Position implements Serializable
     {
         this._y = y;
     }
+
+    /**
+     * Sets this positions x and y equal to the other positions x and y.
+     *
+     * @param pos
+     */
+    public void setPosition(Position pos)
+    {
+        this._x = pos.getX();
+        this._y = pos.getY();
+    }
 }

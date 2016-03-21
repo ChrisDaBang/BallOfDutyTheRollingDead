@@ -4,6 +4,7 @@ import dk.gruppeseks.bodtrd.common.data.Entity;
 import dk.gruppeseks.bodtrd.common.data.EntityType;
 import dk.gruppeseks.bodtrd.common.data.GameData;
 import dk.gruppeseks.bodtrd.common.data.entityelements.Body;
+import static dk.gruppeseks.bodtrd.common.data.entityelements.Body.Geometry.CIRCLE;
 import dk.gruppeseks.bodtrd.common.data.entityelements.Position;
 import dk.gruppeseks.bodtrd.common.data.entityelements.Velocity;
 import dk.gruppeseks.bodtrd.common.data.entityelements.View;
@@ -58,7 +59,7 @@ public class PlayerPlugin implements GamePluginSPI
         entity.setType(EntityType.PLAYER);
 
         entity.add(new Position(200, 100));
-        entity.add(new Body(50, 50));
+        entity.add(new Body(50, 50, CIRCLE));
         entity.add(new Velocity());
         entity.add(new View(PLAYER_IMAGE_FILE_PATH));
 

@@ -9,6 +9,7 @@ import dk.gruppeseks.bodtrd.common.data.Entity;
 import dk.gruppeseks.bodtrd.common.data.EntityType;
 import dk.gruppeseks.bodtrd.common.data.GameData;
 import dk.gruppeseks.bodtrd.common.data.entityelements.Body;
+import static dk.gruppeseks.bodtrd.common.data.entityelements.Body.Geometry.RECTANGLE;
 import dk.gruppeseks.bodtrd.common.data.entityelements.Position;
 import dk.gruppeseks.bodtrd.common.data.entityelements.View;
 import java.util.List;
@@ -152,7 +153,7 @@ public class MapGenerator
 
         // Position is pass by reference and thus we must copy its values. Otherwise all Walls will have the same position.
         wall.add(new Position(pos.getX(), pos.getY()));
-        wall.add(new Body(WALL_SIZE, WALL_SIZE));
+        wall.add(new Body(WALL_SIZE, WALL_SIZE, RECTANGLE));
         wall.add(new View(WALL_IMAGE_FILE_PATH));
 
         return wall;
